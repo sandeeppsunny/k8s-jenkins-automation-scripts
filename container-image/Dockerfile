@@ -28,6 +28,9 @@ RUN cd /opt && wget https://storage.googleapis.com/golang/go${GOVERSION}.linux-a
 RUN go get github.com/vmware/govmomi/govc && \
     ln -s /root/.go/bin/govc /usr/bin
 
+RUN cd /root && curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl && \
+    chmod +x ./kubectl && mv ./kubectl /usr/bin/
+
 RUN mkdir -p /root/scripts
 ADD configure_passwordless_login.sh /root/scripts/configure_passwordless_login.sh
 ADD copy_pub_key.exp /root/scripts/copy_pub_key.exp
