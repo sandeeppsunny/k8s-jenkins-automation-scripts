@@ -57,7 +57,7 @@ def _dictToCapability(d):
 
         if k.split('.')[0] == 'tag':
             namespace = 'http://www.vmware.com/storage/tag'
-            constraint_id = 'com.vmware.storage.tag.cluster.property'
+            constraint_id = 'com.vmware.storage.tag.'+id+'.property'
             values = pbm.capability.types.DiscreteSet()
             values.values.append(v)
             pi.id = constraint_id
