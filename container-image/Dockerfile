@@ -39,5 +39,6 @@ RUN cd /root && wget https://github.com/vmware/vsphere-automation-sdk-python/arc
 
 ADD create_policy.py /root/scripts/create_policy.py
 ADD tagging_workflow.py /root/scripts/tagging_workflow.py
+ADD validate-kubelet-restart.sh /root/scripts/validate-kubelet-restart.sh
 
 ENV PYTHONPATH=/root/vsphere-automation-sdk-python-6.6.1/
