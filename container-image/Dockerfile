@@ -7,7 +7,7 @@ ENV TZ 'America/Los_Angeles'
     dpkg-reconfigure -f noninteractive tzdata && \
     apt-get clean
 
-ENV GOVERSION 1.8.3
+ENV GOVERSION 1.11.5
 ENV GOROOT /opt/go
 ENV GOPATH /root/.go
 
