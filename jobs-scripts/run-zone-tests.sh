@@ -210,6 +210,16 @@ export KUBE_SSH_USER="root"
 export VSPHERE_KUBERNETES_CLUSTER="kubernetes"
 export VOLUME_OPS_SCALE=5
 
+# export environment variables required for zone tests
+export VCP_ZONE_VSANDATASTORE1="vsanDatastore"
+export VCP_ZONE_VSANDATASTORE2="vsanDatastore (1)"
+export VCP_ZONE_COMPATPOLICY_NAME="compatpolicy"
+export VCP_ZONE_NONCOMPATPOLICY_NAME="noncompatpolicy"
+export VCP_ZONE_A="zone-a"
+export VCP_ZONE_B="zone-b"
+export VCP_ZONE_C="zone-c"
+export VCP_ZONE_D="zone-d"
+
 # specify zone testsuite
 GINKGO_FOCUS[0]="Zone\sSupport"
 REGEX="--ginkgo.focus="$(IFS='|' ; echo "${GINKGO_FOCUS[*]}")
